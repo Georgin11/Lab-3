@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:id="@+id/Row1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Bttn07"
+                android:onClick="Bttn7Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/Bttn08"
+                android:onClick="Bttn8Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/btn8" />
+
+            <Button
+                android:id="@+id/Bttn09"
+                android:onClick="Bttn9Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/BttnPlus"
+                android:onClick="btnAddClick"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Row2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Bttn4"
+                android:onClick="Bttn4Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="4"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="103dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="731dp" />
+
+            <Button
+                android:id="@+id/Bttn5"
+                android:onClick="Bttn5Click"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="5"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="103dp"
+                tools:layout_editor_absoluteX="103dp"
+                tools:layout_editor_absoluteY="731dp" />
+
+            <Button
+                android:id="@+id/Bttn6"
+                android:onClick="Bttn6Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="6"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="103dp"
+                tools:layout_editor_absoluteX="206dp"
+                tools:layout_editor_absoluteY="731dp" />
+
+            <Button
+                android:id="@+id/BttnMinus"
+                android:onClick="btnMinusClick"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="-"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="103dp"
+                tools:layout_editor_absoluteX="309dp"
+                tools:layout_editor_absoluteY="731dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Bttn1"
+                android:onClick="Bttn1Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/Bttn2"
+                android:onClick="Bttn2Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/Bttn3"
+                android:onClick="Bttn3Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/BttnX"
+                android:onClick="btnMultiplyClick"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="X" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Bttn0"
+                android:onClick="Bttn0Click"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/BttnDecimal"
+                android:onClick="BttnDotClick"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <Button
+                android:id="@+id/BttnClear"
+                android:onClick="BttnClearClick"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="CE" />
+
+            <Button
+                android:id="@+id/BttnDivide"
+                android:onClick="btnDivideClick"
+
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="/" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/BttnEQ"
+            android:onClick="btnResultClick"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="=" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
