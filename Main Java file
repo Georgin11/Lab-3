@@ -1,0 +1,161 @@
+package com.example.simplecalculator;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private enum Operator {none,add,minus,divide,multiply}
+    private double data1 = 0, data2 = 0;
+    private Operator optr = Operator.none;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void onClickNumericalButton(View view){
+        int pressID = view.getId();
+        TextView curText = (TextView) findViewById(R.id.textView);
+        switch (pressID){
+            default:
+                curText.setText(("ERROR"));
+                Log.d("Error", "Error: Unknown Button");
+                break;
+        }
+    }
+    public void Bttn0Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "0");
+    }
+    public void Bttn1Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "1");
+    }
+    public void Bttn2Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "2");
+    }
+    public void Bttn3Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "3");
+    }
+    public void Bttn4Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "4");
+    }
+    public void Bttn5Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "5");
+    }
+    public void Bttn6Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "6");
+    }
+    public void Bttn7Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "7");
+    }
+    public void Bttn8Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "8");
+    }
+    public void Bttn9Click (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ "9");
+    }
+
+    public void btnAddClick (View view){
+        try{
+        optr = Operator.add;
+        EditText eText = (EditText) findViewById(R.id.textView);
+        data1 = Double.parseDouble(eText.getText().toString());
+        eText.setText("");
+        }catch(Exception e) {
+
+        }
+    }
+    public void btnMinusClick (View view){
+        try{
+        optr = Operator.minus;
+        EditText eText = (EditText) findViewById(R.id.textView);
+        data1 = Double.parseDouble(eText.getText().toString());
+        eText.setText("");
+        }catch(Exception e) {
+
+        }
+    }
+    public void btnMultiplyClick (View view){
+        try {
+            optr = Operator.multiply;
+            EditText eText = (EditText) findViewById(R.id.textView);
+            data1 = Double.parseDouble(eText.getText().toString());
+            eText.setText("");
+        }catch(Exception e) {
+
+        }
+    }
+    public void btnDivideClick (View view){
+        try{
+        optr = Operator.divide;
+        EditText eText = (EditText) findViewById(R.id.textView);
+        data1 = Double.parseDouble(eText.getText().toString());
+        eText.setText("");
+        }catch(Exception e) {
+
+        }
+    }
+    public void BttnDotClick (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText(eText.getText()+ ".");
+    }
+    public void BttnClearClick (View view){
+        EditText eText = (EditText) findViewById(R.id.textView);
+        eText.setText("");
+    }
+    public void btnResultClick(View view){
+        try{
+
+        if (optr != Operator.none){
+            EditText eText = (EditText) findViewById(R.id.textView);
+            data2 = Double.parseDouble(eText.getText().toString());
+            double result = 0;
+            if (optr == Operator.add){
+                result = data1 +data2;
+            }
+            else if (optr == Operator.minus){
+                result = data1 - data2;
+            }
+            else if (optr == Operator.multiply){
+                result = data1 * data2;
+            }
+            else if (optr == Operator.divide){
+                result = data1 / data2;
+            }
+
+            optr =  Operator.none;
+            data1 = result;
+            if ((result -(int)result)!=0){
+                eText.setText((String.valueOf(result)));
+            }
+            else{
+                eText.setText(String.valueOf((int)result));
+            }
+
+
+        }
+        }catch(Exception e) {
+
+        }
+
+    }
+
+
+}
